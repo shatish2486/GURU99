@@ -15,6 +15,18 @@ public class HomePagePom extends BaseClass {
 
 	@FindBy(xpath = "//a[text()='Add Customer']")
 	private WebElement addCustomer;
+	
+	@FindBy(xpath = "//a[text()='Add Tariff Plan']")
+	private WebElement addTarifPlan;
+
+	@FindBy(xpath = "//a[text()='Add Tariff Plan to Customer']")
+	private WebElement addTariffPlanToCustomer;
+
+	@FindBy(xpath = "//a[text()='Pay Billing']")
+	private WebElement payBilling;
+
+	@FindBy(xpath = "//a[text()='Guru99 telecom']")
+	private WebElement logoHomePageLink;
 
 	public WebElement getAddCustomer() {
 		return addCustomer;
@@ -36,15 +48,5 @@ public class HomePagePom extends BaseClass {
 		return logoHomePageLink;
 	}
 
-	@FindBy(xpath = "//a[text()='Add Tariff Plan']")
-	private WebElement addTarifPlan;
-
-	@FindBy(xpath = "//a[text()='Add Tariff Plan to Customer']")
-	private WebElement addTariffPlanToCustomer;
-
-	@FindBy(xpath = "//a[text()='Pay Billing']")
-	private WebElement payBilling;
-
-	@FindBy(xpath = "//a[text()='Guru99 telecom']")
-	private WebElement logoHomePageLink;
+	
 }

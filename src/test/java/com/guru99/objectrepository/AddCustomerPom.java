@@ -12,7 +12,7 @@ public class AddCustomerPom extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//input[@id='done']")
+	@FindBy(xpath = "//label[@for='done']")
 	private WebElement bgcDone;
 
 	@FindBy(xpath = "//input[@id='pending']")

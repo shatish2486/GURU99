@@ -9,8 +9,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class AddCustomer extends BaseClass {
-	HomePagePom p = new HomePagePom();
-	AddCustomerPom a = new AddCustomerPom();
+	static HomePagePom p;
+	static AddCustomerPom a;
 
 	@Given("The user is in the home page")
 	public void the_user_is_in_the_home_page() throws InterruptedException {
@@ -20,12 +20,15 @@ public class AddCustomer extends BaseClass {
 	}
 
 	@Given("The user clicks on the Add Customer button")
+	 
 	public void the_user_clicks_on_the_Add_Customer_button() {
+		p = new HomePagePom();
 		btnClick(p.getAddCustomer());
 	}
 
 	@When("The user enters all the details")
 	public void the_user_enters_all_the_details() {
+		a=new AddCustomerPom();
 		btnClick(a.getBgcDone());
 		type(a.getFirstName(), "Shatish");
 		type(a.getLastName(), "Kumar");

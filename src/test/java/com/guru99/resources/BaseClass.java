@@ -2,6 +2,7 @@ package com.guru99.resources;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseClass {
 
@@ -18,6 +19,7 @@ public class BaseClass {
 		if (browserName == "chrome") {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\Users\\shatish\\Desktop\\Testing\\shatish Project Files\\Guru9\\src\\test\\resources\\driver\\chromedriver.exe");
+			driver = new ChromeDriver();
 			return driver;
 		} else if (browserName == "firefox") {
 			System.setProperty("webdriver.gecko.driver",
@@ -40,7 +42,7 @@ public class BaseClass {
 	 * @param element
 	 * @param value
 	 */
-	public static void type(WebElement element, String value) {
+	public void type(WebElement element, String value) {
 
 		element.sendKeys(value);
 	}
@@ -49,7 +51,7 @@ public class BaseClass {
 	 * <------------lAUNCH THE WEBSITE-------------->
 	 * 
 	 */
-	public static void loadUrl(String Url) {
+	public void loadUrl(String Url) {
 		driver.get(Url);
 	}
 
@@ -59,7 +61,7 @@ public class BaseClass {
 	 * @author shatish
 	 * @param element
 	 */
-	public static void btnClick(WebElement element) {
+	public void btnClick(WebElement element) {
 		element.click();
 
 	}
